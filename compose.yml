@@ -1,0 +1,23 @@
+services:
+  notebook:
+    image: pyspark-notebook-plus
+    build: .
+    pull_policy: if_not_present
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    container_name: pyspark-jupylab
+    ports:
+      - "8888:8888"
+    volumes:
+      - type: bind
+        source: $CONTAINER_SOURCE
+        target: $CONTAINER_TARGET
+      - type: bind
+        source: $DATASTAT_SOURCE
+        target: $DATASTAT_TARGET
+      #- type: bind
+      #  source: $PROJECT_SOURCE
+      #  target: $PROJECT_TARGET
+      - type: bind
+        source: $DATAML_SOURCE
+        target: $DATAML_TARGET
