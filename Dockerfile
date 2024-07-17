@@ -13,6 +13,7 @@ RUN mamba install --quiet --yes \
     'geoutils' \
     'contextily' \
     'ipympl' \
+    'polars' \
     'nodejs' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
