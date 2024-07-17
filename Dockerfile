@@ -1,5 +1,5 @@
 # add libraries to jupyter/pyspark-notebook
-FROM jupyter/pyspark-notebook
+FROM quay.io/jupyter/pyspark-notebook
 
 USER ${NB_UID}
 
